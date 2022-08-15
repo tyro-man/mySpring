@@ -1,6 +1,6 @@
 package cn.myspring.springframework.beans.factory.support;
 
-import cn.myspring.springframework.BeansException;
+import cn.myspring.springframework.beans.BeansException;
 import cn.myspring.springframework.beans.factory.config.BeanDefinition;
 
 

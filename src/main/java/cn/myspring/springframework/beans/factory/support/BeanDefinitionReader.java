@@ -1,7 +1,7 @@
 package cn.myspring.springframework.beans.factory.support;
 
 
-import cn.myspring.springframework.BeansException;
+import cn.myspring.springframework.beans.BeansException;
 import cn.myspring.springframework.core.io.Resource;
 import cn.myspring.springframework.core.io.ResourceLoader;
 
@@ -24,4 +24,5 @@ public interface BeanDefinitionReader {
 
     void loadBeanDefinitions(String location) throws BeansException;
 
+    void loadBeanDefinitions(String... locations) throws BeansException;
 }

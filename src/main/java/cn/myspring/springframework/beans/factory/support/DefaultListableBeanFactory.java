@@ -1,7 +1,7 @@
 package cn.myspring.springframework.beans.factory.support;
 
 
-import cn.myspring.springframework.BeansException;
+import cn.myspring.springframework.beans.BeansException;
 import cn.myspring.springframework.beans.factory.ConfigurableListableBeanFactory;
 import cn.myspring.springframework.beans.factory.config.BeanDefinition;
 
@@ -47,7 +47,7 @@ public class DefaultListableBeanFactory extends AbstractAutowireCapableBeanFacto
     }
 
     @Override
-    public <T> T getBean(String name, Class<T> requiredType) throws BeansException {
-        return null;
+    public void preInstantiateSingletons() throws BeansException {
+        beanDefinitionMap.keySet().forEach(this::getBean);
     }
 }
